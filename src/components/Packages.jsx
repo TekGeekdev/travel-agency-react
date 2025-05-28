@@ -2,7 +2,7 @@
 import Button from './Button';
 import OnePackage from './OnePackage';
 
-const Packages = ({listPackage}) => {
+const Packages = ({listPackage, onDelete}) => {
 
     const onClick = () => {
         console.log('click component');
@@ -15,7 +15,7 @@ const Packages = ({listPackage}) => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {listPackage.map((onePackage) => (
-                    <OnePackage key={onePackage.id} onePackage={onePackage}/>
+                    <OnePackage key={onePackage.id} onePackage={onePackage} onDelete={onDelete}/>
                 ))}
             </div>
         </div>

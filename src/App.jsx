@@ -149,10 +149,13 @@ function App() {
     }
 ]);
 
+const deletePackage = (id) =>{
+    setPackages(listPackage.filter((OnePackage)=>OnePackage.id !== id))
+}
   return (
     <>
       <Header/>
-      <Packages listPackage={listPackage}/>
+      <Packages listPackage={listPackage} onDelete={deletePackage}/>
     </>
 
   );

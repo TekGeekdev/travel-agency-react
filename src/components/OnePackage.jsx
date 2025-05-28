@@ -1,5 +1,5 @@
 import Button from './Button';
-const OnePackage = (onePackage) => {
+const OnePackage = ({onePackage, onDelete}) => {
     const onClick = () => {
         console.log('click component');
     };
@@ -18,7 +18,7 @@ const OnePackage = (onePackage) => {
             </div>
             <div className="flex justify-end gap-2 mt-4">
                 <Button text="Mise à jour" onClick={onClick} />
-                <Button text="Supprimer" onClick={onClick} />
+                <Button text="Supprimer" onClick={()=>onDelete(onePackage.id)} />
             </div>
         </div>
     );
