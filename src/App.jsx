@@ -175,10 +175,23 @@ const deletePackage = async (id) =>{
     setPackages(listPackage.filter((OnePackage)=>OnePackage.id !== id))
 }
 
-const addPackage= (singlePackage) => {
-  const lastId = listPackage.length > 0 ? listPackage[listPackage.length - 1].id : 0
-  const id = lastId + 1
-  const newPackage = {id, ...singlePackage}
+// method no server
+// const addPackage=  (singlePackage) => {
+//   const lastId = listPackage.length > 0 ? listPackage[listPackage.length - 1].id : 0
+//   const id = lastId + 1
+//   const newPackage = {id, ...singlePackage}
+//   setPackages([...listPackage, newPackage])
+// }
+
+const addPackage= async (singlePackage) => {
+    const res = await fetch('http://localhost:5000/listPackage',{
+        method: 'POST',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(singlePackage)
+    })
+  const newPackage = await res.json() 
   setPackages([...listPackage, newPackage])
 }
 
