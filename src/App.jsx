@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Packages from './components/Packages';
 import AddPackage from './components/AddPackage';
 import Footer from './components/Footer';
+import Home from './components/Home';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -203,6 +205,7 @@ const addPackage= async (singlePackage) => {
       <Header/>
       <AddPackage onAdd={addPackage}/>
       <Routes>
+          <Route path='/' element={<Home />}/>
           <Route path='/packages' element={<Packages listPackage={listPackage} onDelete={deletePackage}/>}/>
       </Routes>
       <Footer />
