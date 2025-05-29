@@ -200,13 +200,15 @@ const addPackage= async (singlePackage) => {
   setPackages([...listPackage, newPackage])
 }
 
+const [showAddPackage, setShowAddPackage] = useState(false)
+
   return (
     <BrowserRouter>
       <Header/>
-      <AddPackage onAdd={addPackage}/>
+      {showAddPackage && <AddPackage onAdd={addPackage} />}
       <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/packages' element={<Packages listPackage={listPackage} onDelete={deletePackage}/>}/>
+          <Route path='/' element={<Home setShowAddPackage={setShowAddPackage}/>}/>
+          <Route path='/packages' element={<Packages listPackage={listPackage} onDelete={deletePackage} toggleForm={() => setShowAddPackage(!showAddPackage)} showAdd={showAddPackage}/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
