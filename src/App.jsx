@@ -4,6 +4,9 @@ import './App.css';
 import Header from './components/Header';
 import Packages from './components/Packages';
 import AddPackage from './components/AddPackage';
+import Footer from './components/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 function App() {
 
@@ -196,11 +199,14 @@ const addPackage= async (singlePackage) => {
 }
 
   return (
-    <>
+    <BrowserRouter>
       <Header/>
       <AddPackage onAdd={addPackage}/>
-      <Packages listPackage={listPackage} onDelete={deletePackage}/>
-    </>
+      <Routes>
+          <Route path='/packages' element={<Packages listPackage={listPackage} onDelete={deletePackage}/>}/>
+      </Routes>
+      <Footer />
+    </BrowserRouter>
 
   );
 }
