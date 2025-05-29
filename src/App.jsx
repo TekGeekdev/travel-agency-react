@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Packages from './components/Packages';
+import AddPackage from './components/AddPackage';
 
 function App() {
 
@@ -152,9 +153,18 @@ function App() {
 const deletePackage = (id) =>{
     setPackages(listPackage.filter((OnePackage)=>OnePackage.id !== id))
 }
+
+const addPackage= (singlePackage) => {
+  const lastId = listPackage.length > 0 ? listPackage[listPackage.length - 1].id : 0
+  const id = lastId + 1
+  const newPackage = {id, ...singlePackage}
+  setPackages([...listPackage, newPackage])
+}
+
   return (
     <>
       <Header/>
+      <AddPackage onAdd={addPackage}/>
       <Packages listPackage={listPackage} onDelete={deletePackage}/>
     </>
 
