@@ -17,8 +17,8 @@ const OnePackage = ({onePackage, onDelete}) => {
                 </span>
             </div>
             <div className="flex justify-end gap-2 mt-4">
-                <Button text="Mise à jour" onClick={onClick} />
-                <Button text="Supprimer" onClick={()=>onDelete(onePackage.id)} />
+                <Button text="Mise à jour" onClick={onClick} color='green'/>
+                <Button text="Supprimer" onClick={()=>onDelete(onePackage.id)} color='red'/>
             </div>
         </div>
     );

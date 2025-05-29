@@ -1,6 +1,4 @@
-
 import { useState, useEffect } from 'react';
-import './App.css';
 import Header from './components/Header';
 import Packages from './components/Packages';
 import AddPackage from './components/AddPackage';

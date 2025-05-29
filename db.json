@@ -8,13 +8,6 @@
       "category": "Romantic"
     },
     {
-      "id": "2",
-      "namePackage": "Aventure dans les Alpes",
-      "description": "Randonnée guidée et nuit en refuge",
-      "price": 180,
-      "category": "Adventure"
-    },
-    {
       "id": "3",
       "namePackage": "Spa détente à Montréal",
       "description": "Accès spa nordique et massage pour deux",
