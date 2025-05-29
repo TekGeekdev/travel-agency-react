@@ -18,13 +18,23 @@ const Home = ({ setShowAddPackage }) => {
         </div>
       </div>
 
-      <section className="py-16 px-6 md:px-12 text-center bg-gray-50">
-        <h2 className="text-3xl md:text-4xl font-bold text-teal-600 mb-4">
-          Bienvenue chez Voyage Cigale
-        </h2>
-        <p className="text-gray-700 max-w-2xl mx-auto text-lg">
-          Partez à l’aventure, détendez-vous ou découvrez de nouvelles cultures. Nous avons le forfait parfait pour chaque type de voyageur.
-        </p>
+      <section className=" ">
+        <article className='py-16 px-6 md:px-12 text-center bg-gray-50'>
+            <h2 className="text-3xl md:text-4xl font-bold text-teal-600 mb-4 ">
+              Bienvenue chez Voyage Cigale
+            </h2>
+            <p className="text-gray-700 max-w-2xl mx-auto text-lg">
+              Partez à l’aventure, détendez-vous ou découvrez de nouvelles cultures. Nous avons le forfait parfait pour chaque type de voyageur.
+            </p>
+        </article>
+        <article className='py-16 px-6 md:px-12 text-center mt-9'>
+            <h2 className="text-2xl md:text-3xl font-bold text-teal-600 mb-4">
+              Des Voyages à petit prix
+            </h2>
+            <p className="text-gray-700 max-w-2xl mx-auto text-lg">
+              Envie de voyager sans casser votre tirelire ? Partez à prix mini, souvenirs garantis !
+            </p>
+        </article>
       </section>
     </div>
   );

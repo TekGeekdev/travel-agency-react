@@ -6,6 +6,7 @@ import Packages from './components/Packages';
 import AddPackage from './components/AddPackage';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import About from './components/About';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -209,6 +210,7 @@ const [showAddPackage, setShowAddPackage] = useState(false)
       <Routes>
           <Route path='/' element={<Home setShowAddPackage={setShowAddPackage}/>}/>
           <Route path='/packages' element={<Packages listPackage={listPackage} onDelete={deletePackage} toggleForm={() => setShowAddPackage(!showAddPackage)} showAdd={showAddPackage}/>}/>
+            <Route path='/about' element={<About setShowAddPackage={setShowAddPackage}/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

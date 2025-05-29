@@ -4,10 +4,6 @@ import OnePackage from './OnePackage';
 
 const Packages = ({listPackage, onDelete,toggleForm, showAdd}) => {
 
-    const onClick = () => {
-        console.log('click component');
-    };
-
     return (
         <div className="p-6">
             <div className="flex justify-end mb-6">
